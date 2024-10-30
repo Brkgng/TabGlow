@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "TabGlow",
+  "version": "1.0",
+  "description": "Visually enhance your browsing experience by applying a unique color to the current tab.",
+  "permissions": ["theme"],
+  "background": {
+    "scripts": ["background.js"],
+    "type": "module"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tabglow@brkgng.com",
+      "strict_min_version": "91.0"
+    }
+  }
+}

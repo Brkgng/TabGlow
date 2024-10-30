@@ -1,0 +1,17 @@
+{
+  "name": "tabglow",
+  "version": "1.0.0",
+  "description": "Visually enhance your browsing experience by applying a unique color to the current tab.",
+  "main": "dist/background.js",
+  "scripts": {
+    "build": "tsc && cp manifest.json dist/",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [],
+  "author": "Berker Gungor",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/firefox-webext-browser": "^120.0.4",
+    "typescript": "^5.6.3"
+  }
+}

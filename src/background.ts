@@ -1,37 +1,36 @@
-import { darkThemeColors, lightThemeColors } from './constants.js'
+import { colorOptions, darkThemeColors, lightThemeColors } from './constants.js'
 
-// Function to generate a random color
-function getRandomColor(): string {
-  const letters = '0123456789ABCDEF'
-  let color = '#'
-  for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)]
-  }
-  return color
+const isDarkThemePreferred = () => {
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
 }
 
-const getCurrentColors = async (windowId: number) => {
-  const currentTheme = await browser.theme.getCurrent(windowId)
+function getRandomTabColor() {
+  const colors = isDarkThemePreferred() ? colorOptions.dark : colorOptions.light
+  const randomIndex = Math.floor(Math.random() * colors.length)
 
-  if (currentTheme.colors) {
-    return currentTheme.colors
-  }
-
-  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-  return isDarkMode ? darkThemeColors : lightThemeColors
+  return colors[randomIndex]
 }
 
-// Function to update tab color
+const getThemeColors = (theme: browser._manifest.ThemeType) => {
+  if (theme.colors) {
+    return theme.colors
+  }
+
+  return isDarkThemePreferred() ? darkThemeColors : lightThemeColors
+}
+
 const updateTabColor = async () => {
-  const color = getRandomColor()
   const windowId = browser.windows.WINDOW_ID_CURRENT
+  const theme = await browser.theme.getCurrent(windowId)
 
-  const currentColors = await getCurrentColors(windowId)
+  const themeColors = getThemeColors(theme)
+  const tabColor = getRandomTabColor()
+  console.log('tabColor', tabColor)
 
   browser.theme.update(windowId, {
     colors: {
-      ...currentColors,
-      tab_selected: color
+      ...themeColors,
+      tab_selected: tabColor
     }
   })
 }

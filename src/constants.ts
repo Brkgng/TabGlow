@@ -72,3 +72,42 @@ export const lightThemeColors = {
   input_color: '#1A1A1A',
   urlbar_popup_separator: '#D3D3D3'
 }
+
+export const colorOptions = {
+  dark: [
+    '#BF0000', // Dark red
+    '#BF7F00', // Dark orange
+    '#3C8A3D', // Dark green
+    '#0040BF', // Dark blue
+    '#BF00BF', // Dark magenta
+    '#7F00BF', // Dark purple
+    '#BF5F00', // Burnt orange
+    '#007F7F', // Dark teal
+    '#BF0040', // Raspberry
+    '#8B4513', // Saddle brown
+    '#7F005F', // Dark pink
+    '#BF8C00', // Mustard yellow
+    '#5F5F00', // Dark yellow-green
+    '#3F51B5', // Indigo
+    '#6F4C3E', // Dark brown
+    '#BF007F' // Dark rose
+  ],
+  light: [
+    '#FF6F61', // Coral
+    '#FFA500', // Orange
+    '#6BBE45', // Light green
+    '#4A90E2', // Light blue
+    '#D5006D', // Pink
+    '#A24FBC', // Lavender
+    '#FF7F50', // Coral
+    '#66B2B2', // Light teal
+    '#FF3D68', // Light raspberry
+    '#D3B89B', // Light beige
+    '#FF85B3', // Light pink
+    '#FFD700', // Gold
+    '#AFAF00', // Light yellow-green
+    '#6C7A91', // Light slate blue
+    '#CBB2A1', // Light brown
+    '#FF4F81' // Light rose
+  ]
+}

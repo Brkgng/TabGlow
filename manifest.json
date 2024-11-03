@@ -15,6 +15,9 @@
     "page": "options/options.html",
     "open_in_tab": false
   },
+  "icons": {
+    "48": "assets/icon.png"
+  },
   "browser_specific_settings": {
     "gecko": {
       "id": "tabglow@brkgng.com",

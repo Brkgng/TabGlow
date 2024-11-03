@@ -4,7 +4,7 @@
   "description": "Visually enhance your browsing experience by applying a unique color to the current tab.",
   "main": "dist/background.js",
   "scripts": {
-    "build": "tsc && cpx \"src/**/*.{html,css}\" dist && cpx \"manifest.json\" dist",
+    "build": "tsc && cpx \"src/**/*.{html,css,png}\" dist && cpx \"manifest.json\" dist",
     "clean": "rm -rf dist"
   },
   "keywords": [],

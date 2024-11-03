@@ -1,0 +1,10 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+}
+
+.openSettingsButton {
+  width: 150px;
+  padding: 10px;
+  font-size: 14px;
+}

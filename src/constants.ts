@@ -33,7 +33,7 @@ export const darkThemeColors = {
   input_background: '#42414D',
   input_color: '#FBFBFE',
   urlbar_popup_separator: '#52525E'
-}
+} as const
 
 export const lightThemeColors = {
   tab_background_text: '#1A1A1A',
@@ -71,7 +71,7 @@ export const lightThemeColors = {
   input_background: '#F9F9F9',
   input_color: '#1A1A1A',
   urlbar_popup_separator: '#D3D3D3'
-}
+} as const
 
 export const colorOptions = {
   dark: [
@@ -86,7 +86,6 @@ export const colorOptions = {
     '#BF0040', // Raspberry
     '#8B4513', // Saddle brown
     '#7F005F', // Dark pink
-    '#BF8C00', // Mustard yellow
     '#5F5F00', // Dark yellow-green
     '#3F51B5', // Indigo
     '#6F4C3E', // Dark brown
@@ -97,7 +96,6 @@ export const colorOptions = {
     '#FFA500', // Orange
     '#6BBE45', // Light green
     '#4A90E2', // Light blue
-    '#D5006D', // Pink
     '#A24FBC', // Lavender
     '#FF7F50', // Coral
     '#66B2B2', // Light teal
@@ -110,4 +108,4 @@ export const colorOptions = {
     '#CBB2A1', // Light brown
     '#FF4F81' // Light rose
   ]
-}
+} as const

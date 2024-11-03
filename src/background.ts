@@ -1,11 +1,8 @@
-import { colorOptions, darkThemeColors, lightThemeColors } from './constants.js'
+import { darkThemeColors, lightThemeColors } from './constants.js'
+import { getStoredOrDefaultColors, isDarkThemePreferred } from './helpers.js'
 
-const isDarkThemePreferred = () => {
-  return window.matchMedia('(prefers-color-scheme: dark)').matches
-}
-
-function getRandomTabColor() {
-  const colors = isDarkThemePreferred() ? colorOptions.dark : colorOptions.light
+const getRandomTabColor = async () => {
+  const colors = await getStoredOrDefaultColors()
   const randomIndex = Math.floor(Math.random() * colors.length)
 
   return colors[randomIndex]
@@ -24,8 +21,7 @@ const updateTabColor = async () => {
   const theme = await browser.theme.getCurrent(windowId)
 
   const themeColors = getThemeColors(theme)
-  const tabColor = getRandomTabColor()
-  console.log('tabColor', tabColor)
+  const tabColor = await getRandomTabColor()
 
   browser.theme.update(windowId, {
     colors: {

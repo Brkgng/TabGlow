@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  background-color: #3e3c42;
+}
+
+.colorList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  row-gap: 10px;
+}
+
+.colorContainer {
+  display: flex;
+}
+
+.colorInput {
+  width: 60px;
+  height: 25px;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+.colorInput::-moz-color-swatch {
+  border: 0;
+}
+
+.deleteColorButton {
+  font-weight: 700;
+  border: 0;
+  border-left: 1px solid black;
+  cursor: pointer;
+}
+
+.addColorButton {
+  width: 25%;
+  padding: 4px;
+  margin: auto;
+  margin-top: 15px;
+  text-align: center;
+}

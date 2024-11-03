@@ -36,3 +36,8 @@ updateTabColor()
 
 // Update the color when the active tab changes
 browser.tabs.onActivated.addListener(updateTabColor)
+
+// Open settings when the icon is clicked
+browser.browserAction.onClicked.addListener(() => {
+  browser.runtime.openOptionsPage()
+})

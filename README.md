@@ -8,7 +8,7 @@
 
 - **Random Tab Colors**: Each time you switch tabs, a random color from your preferred theme (light or dark) is applied to the active tab.
 - **Dark and Light Theme Support**: TabGlow automatically detects and applies a color scheme based on your system theme.
-- **Customizable Color Options**: Users can add, delete, and update tab colors directly from the extension's popup. Color selections are saved to storage, making them persistent across sessions.
+- **Customizable Color Options**: Users can add, delete, and update tab colors directly from the extension settings. Color selections are saved to storage, making them persistent across sessions.
 
 ---
 

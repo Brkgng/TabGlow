@@ -33,10 +33,21 @@ body {
   cursor: pointer;
 }
 
-.addColorButton {
-  width: 25%;
+.colorOperations {
+  display: flex;
+  justify-content: space-between;
+  width: 370px;
+  height: 30px;
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+.colorOperations__addColor {
+  width: 150px;
   padding: 4px;
-  margin: auto;
-  margin-top: 15px;
+  text-align: center;
+}
+
+.colorOperations__resetColors {
   text-align: center;
 }

@@ -4,6 +4,7 @@ import { DEFAULT_COLOR, MAX_NUMBER_OF_COLORS } from './constants.js'
 
 const colorList = document.getElementById('colorList')
 const addColorButton = document.getElementById('addColorButton')
+const resetColorsButton = document.getElementById('resetColorsButton')
 
 // Function to load and display colors
 const loadColors = async () => {
@@ -100,6 +101,14 @@ const deleteColor = async (index: number) => {
   loadColors()
 }
 
+// Function to reset colors to default
+const resetColors = async () => {
+  const defaultColors = isDarkThemePreferred() ? colorOptions.dark : colorOptions.light
+  await saveColors(defaultColors)
+  loadColors()
+}
+
 // Event Listeners
 addColorButton?.addEventListener('click', addColor)
+resetColorsButton?.addEventListener('click', resetColors)
 window.addEventListener('DOMContentLoaded', loadColors)

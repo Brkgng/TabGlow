@@ -16,8 +16,8 @@ export const getStoredOrDefaultColors = async () => {
     return colors
   }
 
-  const initialColors = isDarkThemePreferred() ? colorOptions.dark : colorOptions.light
-  await saveColors(initialColors)
+  const defaultColors = isDarkThemePreferred() ? colorOptions.dark : colorOptions.light
+  await saveColors(defaultColors)
 
-  return initialColors
+  return defaultColors
 }

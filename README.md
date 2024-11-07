@@ -2,6 +2,8 @@
 
 **TabGlow** is a firefox extension that lets you customize your browsing experience by applying a unique color to the current tab. It's designed to enhance visibility, organization, and focus while working with multiple tabs. Users can manage color options, and ensure that their chosen colors persist across sessions.
 
+You can install this extension directly from the [Firefox Add-ons store](https://addons.mozilla.org/en-US/firefox/addon/tabglow-tab-colorizer/).
+
 ---
 
 ## Features
